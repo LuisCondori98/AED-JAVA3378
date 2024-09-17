@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import sesion02.Paciente;
+
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -70,8 +73,15 @@ public class Propuesto_2_2 extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
+		Paciente paciente = new Paciente("Luis", 25, 180, 65);
+
+		imprimir("Dir Mem. " + paciente);
+		imprimir("Nombres " + paciente.getNombre());
+		imprimir("Edad " + paciente.getEdad());
+		imprimir("Talla " + paciente.getTalla());
+		imprimir("Peso " + paciente.getPeso());
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
