@@ -150,14 +150,17 @@ public class Propuesto_2_3 extends JFrame implements ActionListener {
 				mensaje("Ingrese NOMBRE correcto", txtNombre);
 		}
 		catch (Exception e) {
-			mensaje("Ingrese CÓDIGO correcto", txtCodigo);
+			mensaje("Ingrese Cï¿½DIGO correcto", txtCodigo);
 		}	
 	}
 	protected void actionPerformedBtnBorrar(ActionEvent arg0) {
 		limpieza();
-		txtS.setText("");		
+		txtS.setText("");
+		
+		
+		imprimir("Cambiando desde Eclipse");
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void limpieza() {
 		txtCodigo.setText("");
 		txtNombre.setText("");
@@ -165,7 +168,7 @@ public class Propuesto_2_3 extends JFrame implements ActionListener {
 		txtSueldo.setText("");
 		txtCodigo.requestFocus();
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
@@ -174,7 +177,7 @@ public class Propuesto_2_3 extends JFrame implements ActionListener {
 		txt.setText("");
 		txt.requestFocus();
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerCodigo() {
 		return Integer.parseInt(txtCodigo.getText().trim());
 	}
