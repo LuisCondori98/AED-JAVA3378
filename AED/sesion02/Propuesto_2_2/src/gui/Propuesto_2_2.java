@@ -80,6 +80,7 @@ public class Propuesto_2_2 extends JFrame implements ActionListener {
 		imprimir("Edad " + paciente.getEdad());
 		imprimir("Talla " + paciente.getTalla());
 		imprimir("Peso " + paciente.getPeso());
+		imprimir(" ");
 	}
 	//  M�todos tipo void (con par�metros)
 	void imprimir(String s) {
