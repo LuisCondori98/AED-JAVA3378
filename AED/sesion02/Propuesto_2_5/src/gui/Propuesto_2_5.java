@@ -70,8 +70,14 @@ public class Propuesto_2_5 extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
+		Trabajador t = new Trabajador();
+
+		t1.codigo = 6588987;
+		t1.nombre = "Kevin";
+		t1.categoria = 0;
+		imprimir("Dir Mem :" + t1);
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
