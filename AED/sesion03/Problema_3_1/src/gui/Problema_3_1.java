@@ -1,6 +1,8 @@
-package gui;
+git branch package gui;
 
 import java.awt.EventQueue;
+
+import sesion03.Facura;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -70,12 +72,24 @@ public class Problema_3_1 extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 
+		Facura f = new Facura();
+
 	}
-	//  Métodos tipo void (sin parámetros)
+
+	void listado(Facura x) {
+
+		imprimir("Dir Mem :" + x);
+		imprimir("Ruc :" + x);
+		imprimir("Empresa :" + x);
+		imprimir("Unidades :" + x);
+		imprimir("Precio :" + x);
+		imprimir("Importe factura :" + x);
+	}
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}	
