@@ -71,16 +71,34 @@ public class Propuesto_2_5 extends JFrame implements ActionListener {
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
 		Trabajador t = new Trabajador();
+		Trabajador2 t2 = new Trabajador2(9316875042, 2, "Harold");
 
 		t1.Codigo = 6588987;
 		t1.Nombre = "Kevin";
 		t1.Categoria = 0;
 		imprimir("Dir Mem :" + t);
-		imprimir("Dir Mem :" + t.Codigo);
-		imprimir("Dir Mem :" + t.Nombre);
-		imprimir("Dir Mem :" + t.calcularDescuento());
-		imprimir("Dir Mem :" + t.calcularSueldoNeto());
+		imprimir("Codigo :" + t.Codigo);
+		imprimir("Nombre :" + t.Nombre);
+		imprimir("Categoria :" + t.Categoria);
+		imprimir("Sueldo Bruto :" + t.retornarSueldoBruto());
+		imprimir("Calcular descuento :" + t.calcularDescuento());
+		imprimir("Sueldo Neto :" + t.calcularSueldoNeto());
+		imprimir("");
+
+		lectura(t2);
 	}
+
+	void listado() {
+		imprimir("Dir Mem :" + t);
+		imprimir("Codigo :" + t.getCodigo());
+		imprimir("Nombre :" + t.getNombre());
+		imprimir("Categoria :" + t.getCategoria());
+		imprimir("Sueldo Bruto :" + t.retornarSueldoBruto());
+		imprimir("Calcular descuento :" + t.calcularDescuento());
+		imprimir("Sueldo Neto :" + t.calcularSueldoNeto());
+		imrimir("");
+	}
+
 	//  M�todos tipo void (con par�metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
