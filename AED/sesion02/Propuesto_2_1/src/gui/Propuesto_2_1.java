@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import sesion02.Video;
+
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -70,8 +73,27 @@ public class Propuesto_2_1 extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
+		Video video = new Video(8607152, "Buscando a nemo", 3, 230, 3.90);
+
+		listado(video);
+		double precioOriginal = video.getPrecio();
+		video.setPrecio(precioOriginal + 5.5);
+		listado(video);
 	}
-	//  Métodos tipo void (con parámetros)
+
+	void listado(Video x) {
+
+		imprimir("Dir Mem. \t\t:" + x);
+		imprimir("Codigo \t\t\t:" + x.getCodigo());
+		imprimir("Nombre de video \t:" + x.getNombreVideo());
+		imprimir("Duracion \t\t:" + x.getDuracion());
+		imprimir("Precio \t\t\t:" + x.getPrecio());
+		imprimir("Tipo de cambio \t\t:" + x.getTipoCambio());
+		imprimir("Precio en Dolares \t:" + x.retornarPrecioDolares());
+		imprimir("\n");
+	}
+
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
