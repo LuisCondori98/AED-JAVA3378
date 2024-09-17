@@ -31,5 +31,5 @@ Este repositorio está abierto para contribuciones y mejoras. Si deseas sugerir 
 
 ## Contacto
 
-Para cualquier consulta, puedes contactarme en ([https://github.com/tuusuario](https://github.com/LuisCondori98)).
+Para cualquier consulta, puedes contactarme en (https://github.com/LuisCondori98).
 
