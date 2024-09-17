@@ -74,6 +74,8 @@ public class Problema_3_1 extends JFrame implements ActionListener {
 
 		Facura f = new Facura();
 
+		lectura(f);
+
 	}
 
 	void listado(Facura x) {
