@@ -10,8 +10,8 @@ public class ArregloTemperaturas {
 		temperatura = new double[10];
 		indice = 0;
 	}
-	//  Operaciones públicas básicas
-	public int tamaño() {
+	//  Operaciones pï¿½blicas bï¿½sicas
+	public int tamanio() {
 		return indice;
 	}
 	public double obtener(int i) {
@@ -23,7 +23,7 @@ public class ArregloTemperaturas {
 		temperatura[indice] = numero;
 		indice ++;
 	}
-	//  Operaciones públicas complementarias
+	//  Operaciones pï¿½blicas complementarias
 	public void eliminarAlFinal() {
 		indice --;
 	}

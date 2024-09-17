@@ -91,7 +91,7 @@ public class Problema_7_3 extends JFrame implements ActionListener {
 		btnRemplazarPrimeraTemperaturaFebril.setBounds(290, 130, 260, 23);
 		contentPane.add(btnRemplazarPrimeraTemperaturaFebril);
 		
-		btnRemplazarUltimaTemperaturaFebril = new JButton("Remplazar última temperatura febril");
+		btnRemplazarUltimaTemperaturaFebril = new JButton("Remplazar ï¿½ltima temperatura febril");
 		btnRemplazarUltimaTemperaturaFebril.addActionListener(this);
 		btnRemplazarUltimaTemperaturaFebril.setBounds(290, 160, 260, 23);
 		contentPane.add(btnRemplazarUltimaTemperaturaFebril);
@@ -132,7 +132,7 @@ public class Problema_7_3 extends JFrame implements ActionListener {
 		limpieza();
 	}
 
-	//  Declaraciòn global
+	//  Declaraciï¿½n global
 	ArregloTemperaturas at = new ArregloTemperaturas();
 	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
@@ -145,20 +145,20 @@ public class Problema_7_3 extends JFrame implements ActionListener {
 		}
 	}
 	protected void actionPerformedBtnEliminarAlFinal(ActionEvent arg0) {
-		if (at.tamaño() > 0) {
+		if (at.tamanio() > 0) {
 			at.eliminarAlFinal();
 			listar();
 		}
 		else
-			mensaje("el Arreglo está vacío");	
+			mensaje("el Arreglo estï¿½ vacï¿½o");	
 	}
 	protected void actionPerformedBtnEliminarTodo(ActionEvent arg0) {
-		if (at.tamaño() > 0) {
+		if (at.tamanio() > 0) {
 			at.eliminarTodo();
 			listar();
 		}
 		else
-			mensaje("el Arreglo está vacío");	
+			mensaje("el Arreglo estï¿½ vacï¿½o");	
 	}
 	protected void actionPerformedBtnRemplazarPrimeraTemperaturaFebril(ActionEvent arg0) {
 
@@ -169,7 +169,7 @@ public class Problema_7_3 extends JFrame implements ActionListener {
 	protected void actionPerformedBtnEliminarPrimeraTemperaturaFebril(ActionEvent arg0) {
 		
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -179,17 +179,17 @@ public class Problema_7_3 extends JFrame implements ActionListener {
 	}
 	void listar() {
 		txtS.setText("");
-		for (int i=0; i<at.tamaño(); i++)
+		for (int i=0; i<at.tamanio(); i++)
 			imprimir("temperatura[" + i + "] : " + at.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	double leerTemperatura()  {
 		return Double.parseDouble(txtTemperatura.getText().trim());
 	}

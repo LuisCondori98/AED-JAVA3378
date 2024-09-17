@@ -60,7 +60,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNumero = new JLabel("Número");
+		lblNumero = new JLabel("Nï¿½mero");
 		lblNumero.setBounds(10, 11, 50, 23);
 		contentPane.add(lblNumero);
 
@@ -80,7 +80,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		btnPrimeroAlFinal.setBounds(340, 78, 180, 23);
 		contentPane.add(btnPrimeroAlFinal);
 		
-		btnUltimoAlInicio = new JButton("Último al inicio");
+		btnUltimoAlInicio = new JButton("ï¿½ltimo al inicio");
 		btnUltimoAlInicio.addActionListener(this);
 		btnUltimoAlInicio.setBounds(340, 108, 180, 23);
 		contentPane.add(btnUltimoAlInicio);
@@ -99,7 +99,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		scrollPane.setViewportView(txtS);
 	}
 	
-	//  Declaración global
+	//  Declaraciï¿½n global
 	Arreglo a = new Arreglo();
 
 	/**
@@ -126,7 +126,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		limpieza();
 	}
 	/**
-	 *  Lee un número, lo busca, y si no está registrado lo adiciona
+	 *  Lee un nï¿½mero, lo busca, y si no estï¿½ registrado lo adiciona
 	 */	
 	protected void actionPerformedBtnBuscarAdicionar(ActionEvent arg0) {
 		try {
@@ -138,19 +138,19 @@ public class Ejemplo extends JFrame implements ActionListener {
 		}
 	}
 	/**
-	 *  Traslada el primer número al final
+	 *  Traslada el primer nï¿½mero al final
 	 */
 	protected void actionPerformedBtnPrimeroAlFinal(ActionEvent arg0) {
 
 	}
 	/**
-	 *  Traslada el último número al inicio
+	 *  Traslada el ï¿½ltimo nï¿½mero al inicio
 	 */
 	protected void actionPerformedBtnUltimoAlInicio(ActionEvent arg0) {
 
 	}
 	/**
-	 *  Lee un número, lo busca, y si está registrado lo elimina
+	 *  Lee un nï¿½mero, lo busca, y si estï¿½ registrado lo elimina
 	 */
 	protected void actionPerformedBtnBuscarEliminar(ActionEvent arg0) {
 		try {
@@ -161,7 +161,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 			mensaje("error de ingreso");
 		}
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -171,17 +171,17 @@ public class Ejemplo extends JFrame implements ActionListener {
 	}
 	void listar() {
 		txtS.setText("");
-		for (int i=0; i<a.tamaño(); i++)
+		for (int i=0; i<a.tamanio(); i++)
 			imprimir("n[" + i + "] : " + a.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerNumero()  {
 		return Integer.parseInt(txtNumero.getText().trim());
 	}

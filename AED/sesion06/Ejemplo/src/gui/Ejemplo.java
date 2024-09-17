@@ -60,7 +60,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNumero = new JLabel("Número");
+		lblNumero = new JLabel("Nï¿½mero");
 		lblNumero.setBounds(10, 11, 50, 23);
 		contentPane.add(lblNumero);
 
@@ -94,7 +94,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		scrollPane.setViewportView(txtS);
 	}
 	
-	//  Declaración global
+	//  Declaraciï¿½n global
 	Arreglo a = new Arreglo();
 
 	/**
@@ -118,7 +118,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		limpieza();
 	}
 	/**
-	 *  Adiciona un número en el arreglo
+	 *  Adiciona un nï¿½mero en el arreglo
 	 */	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
 		try {
@@ -130,30 +130,30 @@ public class Ejemplo extends JFrame implements ActionListener {
 		}
 	}
 	/**
-	 *  Invoca al método eliminarAlFinal para eliminar
-	 *  lógicamente el último dato ingresado
+	 *  Invoca al mï¿½todo eliminarAlFinal para eliminar
+	 *  lï¿½gicamente el ï¿½ltimo dato ingresado
 	 */
 	protected void actionPerformedBtnEliminarAlFinal(ActionEvent arg0) {
-		if (a.tamaño() > 0) {
+		if (a.tamanio() > 0) {
 			a.eliminarAlFinal();
 			listar();
 		}
 		else
-			mensaje("el Arreglo está vacío");
+			mensaje("el Arreglo estï¿½ vacï¿½o");
 	}
 	/**
-	 *  Invoca al método eliminarTodo para eliminar
-	 *  lógicamente todos los datos ingresados
+	 *  Invoca al mï¿½todo eliminarTodo para eliminar
+	 *  lï¿½gicamente todos los datos ingresados
 	 */
 	protected void actionPerformedBtnEliminarTodo(ActionEvent arg0) {
-		if (a.tamaño() > 0) {
+		if (a.tamanio() > 0) {
 			a.eliminarTodo();
 			txtS.setText("");
 		}
 		else
-			mensaje("el Arreglo está vacío");
+			mensaje("el Arreglo estï¿½ vacï¿½o");
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -163,17 +163,17 @@ public class Ejemplo extends JFrame implements ActionListener {
 	}
 	void listar() {
 		txtS.setText("");
-		for (int i=0; i<a.tamaño(); i++)
+		for (int i=0; i<a.tamanio(); i++)
 			imprimir("n[" + i + "] : " + a.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerNumero()  {
 		return Integer.parseInt(txtNumero.getText().trim());
 	}

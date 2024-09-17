@@ -10,8 +10,8 @@ public class Arreglo {
 		n = new int[10];
 		indice = 0;
 	}
-	//  Operaciones públicas básicas
-	public int tamaño() {
+	//  Operaciones pï¿½blicas bï¿½sicas
+	public int tamanio() {
 		return indice;
 	}
 	public int obtener(int i) {
@@ -23,7 +23,7 @@ public class Arreglo {
 		n[indice] = numero;
 		indice ++;
 	}
-	//  Operaciones públicas complementarias
+	//  Operaciones pï¿½blicas complementarias
 	public void buscarRezagar(int numero) {
 		int pos = buscar(numero);
 		if (pos != -1)

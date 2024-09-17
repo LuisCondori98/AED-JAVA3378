@@ -132,7 +132,7 @@ public class Problema_7_1 extends JFrame implements ActionListener {
 		limpieza();
 	}
 
-	//  Declaración global
+	//  Declaraciï¿½n global
 	ArregloEdades ae = new ArregloEdades();
 	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
@@ -145,20 +145,20 @@ public class Problema_7_1 extends JFrame implements ActionListener {
 		}	
 	}
 	protected void actionPerformedBtnEliminarAlFinal(ActionEvent arg0) {
-		if (ae.tamaño() > 0) {
+		if (ae.tamanio() > 0) {
 			ae.eliminarAlFinal();
 			listar();
 		}
 		else
-			mensaje("el Arreglo está vacío");		
+			mensaje("el Arreglo estï¿½ vacï¿½o");		
 	}
 	protected void actionPerformedBtnEliminarTodo(ActionEvent arg0) {
-		if (ae.tamaño() > 0) {
+		if (ae.tamanio() > 0) {
 			ae.eliminarTodo();
 			listar();
 		}
 		else
-			mensaje("el Arreglo está vacío");			
+			mensaje("el Arreglo estï¿½ vacï¿½o");			
 	}
 	protected void actionPerformedBtnRemplazarPrimeraEdadAdolescente(ActionEvent arg0) {
 		
@@ -169,7 +169,7 @@ public class Problema_7_1 extends JFrame implements ActionListener {
 	protected void actionPerformedBtnEliminarPrimeraEdadAdolescente(ActionEvent arg0) {
 		
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -179,17 +179,17 @@ public class Problema_7_1 extends JFrame implements ActionListener {
 	}
 	void listar() {
 		txtS.setText("");
-		for (int i=0; i<ae.tamaño(); i++)
+		for (int i=0; i<ae.tamanio(); i++)
 			imprimir("edad[" + i + "] : " + ae.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerEdad()  {
 		return Integer.parseInt(txtEdad.getText().trim());
 	}

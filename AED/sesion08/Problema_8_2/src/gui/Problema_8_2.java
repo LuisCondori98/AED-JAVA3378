@@ -58,7 +58,7 @@ public class Problema_8_2 extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNumero = new JLabel("Número");
+		lblNumero = new JLabel("Nï¿½mero");
 		lblNumero.setBounds(10, 11, 50, 23);
 		contentPane.add(lblNumero);
 
@@ -82,7 +82,7 @@ public class Problema_8_2 extends JFrame implements ActionListener {
 		scrollPane.setViewportView(txtS);
 	}
 		
-	//  Declaración global
+	//  Declaraciï¿½n global
 	Arreglo a = new Arreglo();
 
 	public void actionPerformed(ActionEvent arg0) {
@@ -100,7 +100,7 @@ public class Problema_8_2 extends JFrame implements ActionListener {
 			mensaje("error de ingreso");
 		}
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -110,17 +110,17 @@ public class Problema_8_2 extends JFrame implements ActionListener {
 	}
 	void listar() {
 		txtS.setText("");
-		for (int i=0; i<a.tamaño(); i++)
+		for (int i=0; i<a.tamanio(); i++)
 			imprimir("n[" + i + "] : " + a.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerNumero()  {
 		return Integer.parseInt(txtNumero.getText().trim());
 	}
