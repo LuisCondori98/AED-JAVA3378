@@ -72,10 +72,14 @@ public class Propuesto_2_5 extends JFrame implements ActionListener {
 		
 		Trabajador t = new Trabajador();
 
-		t1.codigo = 6588987;
-		t1.nombre = "Kevin";
-		t1.categoria = 0;
-		imprimir("Dir Mem :" + t1);
+		t1.Codigo = 6588987;
+		t1.Nombre = "Kevin";
+		t1.Categoria = 0;
+		imprimir("Dir Mem :" + t);
+		imprimir("Dir Mem :" + t.Codigo);
+		imprimir("Dir Mem :" + t.Nombre);
+		imprimir("Dir Mem :" + t.calcularDescuento());
+		imprimir("Dir Mem :" + t.calcularSueldoNeto());
 	}
 	//  M�todos tipo void (con par�metros)
 	void imprimir(String s) {
