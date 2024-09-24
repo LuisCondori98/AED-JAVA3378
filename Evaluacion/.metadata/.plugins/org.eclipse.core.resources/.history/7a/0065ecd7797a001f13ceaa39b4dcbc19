@@ -1,0 +1,10 @@
+package clases;
+
+public class Pregunta1 {
+
+	private int codigo, categoria, horas;
+	private String nombre;
+	private double tarifa;
+	
+	
+}

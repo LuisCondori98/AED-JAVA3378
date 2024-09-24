@@ -2,5 +2,105 @@ package clases;
 
 public class Pregunta2 {
 	
+	private int Codigo, CantAsesorias;
+	private double tarifaAsesoria;
+	private String Asesor;
 	
+	private static int cAsesores = 0;
+	private static int aAsesores = 0;
+	
+	public final double FACTOR_DSCTO = 0.15;
+
+	public Pregunta2(int codigo, int cantAsesorias, double tarifaAsesoria, String asesor) {
+		Codigo = codigo;
+		CantAsesorias = cantAsesorias;
+		this.tarifaAsesoria = tarifaAsesoria;
+		Asesor = asesor;
+	}
+	
+	//-	Un constructor que reciba a través de parámetros el código y la tarifa por asesoría y se los envíe al primer constructor
+	//junto con el valor 8 para la cantidad de asesorías y “Julián” para el nombre.
+	
+	public Pregunta2(int codigo, double tarifaAsesoria) {
+		
+		Codigo = codigo;
+		this.tarifaAsesoria = tarifaAsesoria;
+		CantAsesorias = 8;
+		Asesor = "Julian";
+	}
+	
+	//-	Un constructor sin parámetros que envíe al segundo constructor los valores 1105 para el código, 30.0 para la
+	//tarifa por asesoría y “Percy” para el nombre del asesor.
+	public Pregunta2() {
+		
+		Codigo = 1105;
+		this.tarifaAsesoria = 30;
+		Asesor = "Percy";
+	}
+	
+	//-	Un método que retorne el sueldo bruto (tarifa por consulta * número de asesorías).
+	public double retornarSueldoBruto() {
+		
+		return tarifaAsesoria * CantAsesorias;
+	}
+	
+	//-	Un método que retorne el descuento (FACTOR_DSCTO *  sueldo bruto).
+	public double retornarDescuento() {
+		
+		return FACTOR_DSCTO * retornarSueldoBruto();
+	}
+	
+	//-	Un método que retorne el sueldo neto (sueldo bruto – descuento).
+	public double retornarSueldoNeto() {
+		
+		return retornarSueldoBruto() - retornarDescuento();
+	}
+
+	public static int getcAsesores() {
+		return cAsesores;
+	}
+
+	public static void setcAsesores(int cAsesores) {
+		Pregunta2.cAsesores = cAsesores;
+	}
+
+	public static int getaAsesores() {
+		return aAsesores;
+	}
+
+	public static void setaAsesores(int aAsesores) {
+		Pregunta2.aAsesores = aAsesores;
+	}
+
+	public int getCodigo() {
+		return Codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		Codigo = codigo;
+	}
+
+	public int getCantAsesorias() {
+		return CantAsesorias;
+	}
+
+	public void setCantAsesorias(int cantAsesorias) {
+		CantAsesorias = cantAsesorias;
+	}
+
+	public double getTarifaAsesoria() {
+		return tarifaAsesoria;
+	}
+
+	public void setTarifaAsesoria(double tarifaAsesoria) {
+		this.tarifaAsesoria = tarifaAsesoria;
+	}
+
+	public String getAsesor() {
+		return Asesor;
+	}
+
+	public void setAsesor(String asesor) {
+		Asesor = asesor;
+	}
 }

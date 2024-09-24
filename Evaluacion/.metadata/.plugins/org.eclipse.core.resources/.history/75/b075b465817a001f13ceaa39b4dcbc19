@@ -1,0 +1,40 @@
+package clases;
+
+public class Pregunta2 {
+	
+	private int Codigo, CantAsesorias;
+	private double tarifaAsesoria;
+	private String Asesor;
+	
+	private static int cAsesores = 0;
+	private static int aAsesores = 0;
+	
+	public final double FACTOR_DSCTO = 0.15;
+
+	public Pregunta2(int codigo, int cantAsesorias, double tarifaAsesoria, String asesor) {
+		Codigo = codigo;
+		CantAsesorias = cantAsesorias;
+		this.tarifaAsesoria = tarifaAsesoria;
+		Asesor = asesor;
+	}
+	
+	//-	Un constructor que reciba a través de parámetros el código y la tarifa por asesoría y se los envíe al primer constructor
+	//junto con el valor 8 para la cantidad de asesorías y “Julián” para el nombre.
+	
+	public Pregunta2(int codigo, double tarifaAsesoria) {
+		
+		Codigo = codigo;
+		this.tarifaAsesoria = tarifaAsesoria;
+		CantAsesorias = 8;
+		Asesor = "Julian";
+	}
+	
+	//-	Un constructor sin parámetros que envíe al segundo constructor los valores 1105 para el código, 30.0 para la
+	//tarifa por asesoría y “Percy” para el nombre del asesor.
+	public Pregunta2() {
+		
+		Codigo = 1105;
+		this.tarifaAsesoria = 30;
+		Asesor = "Percy";
+	}
+}

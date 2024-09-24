@@ -1,0 +1,28 @@
+package clases;
+
+public class Pregunta1 {
+
+	private int codigo, categoria, horas;
+	private String nombre;
+	private double tarifa;
+	
+	public Pregunta1(int codigo, int categoria, int horas, String nombre, double tarifa) {
+		this.codigo = codigo;
+		this.categoria = categoria;
+		this.horas = horas;
+		this.nombre = nombre;
+		this.tarifa = tarifa;
+	}
+	
+	//-	Un método que retorne el sueldo bruto (horas * tarifa).
+	
+	public double retornarSueldoBruto() {
+		
+		return this.horas * this.tarifa;
+	}
+	
+	//-	Un método que retorne el descuento por AFP (13% del sueldo bruto). 
+	//-	Un método que retorne el descuento por EPS (8% del sueldo bruto). 
+	//-	Un método que retorne el sueldo neto (sueldo bruto – descuento AFP – descuento EPS)
+
+}

@@ -1,0 +1,21 @@
+package clases;
+
+public class Pregunta2 {
+	
+	private int Codigo, CantAsesorias;
+	private String Asesor;
+	
+	private static int cAsesores = 0;
+	private static int aAsesores = 0;
+	
+	public final double FACTOR_DSCTO = 0.15;
+	
+	public Pregunta2(int codigo, int cantAsesorias, String asesor) {
+		Codigo = codigo;
+		CantAsesorias = cantAsesorias;
+		Asesor = asesor;
+	}
+		
+	
+	
+}

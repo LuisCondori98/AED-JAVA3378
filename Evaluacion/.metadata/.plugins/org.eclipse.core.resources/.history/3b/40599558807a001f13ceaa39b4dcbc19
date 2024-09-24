@@ -1,0 +1,11 @@
+package clases;
+
+public class Pregunta2 {
+	
+	private int Codigo, CantAsesorias;
+	private String Asesor;
+	
+	private static int cAsesores = 0;
+	private static int aAsesores = 0;
+	
+}
