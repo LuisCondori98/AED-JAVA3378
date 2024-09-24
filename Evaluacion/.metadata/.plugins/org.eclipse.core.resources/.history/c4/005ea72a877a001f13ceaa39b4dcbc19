@@ -25,7 +25,10 @@ public class Pregunta2 {
 	
 	public Pregunta2(int codigo, double tarifaAsesoria) {
 		
-		this(codigo, 8, tarifaAsesoria, "Julian");
+		Codigo = codigo;
+		this.tarifaAsesoria = tarifaAsesoria;
+		CantAsesorias = 8;
+		Asesor = "Julian";
 		cAsesores++;
 		aAsesores += retornarSueldoBruto();
 	}
@@ -34,7 +37,9 @@ public class Pregunta2 {
 	//tarifa por asesoría y “Percy” para el nombre del asesor.
 	public Pregunta2() {
 		
-		this(1105, 0, 30, "Percy");
+		Codigo = 1105;
+		this.tarifaAsesoria = 30;
+		Asesor = "Percy";
 		cAsesores++;
 		aAsesores += retornarSueldoBruto();
 	}
