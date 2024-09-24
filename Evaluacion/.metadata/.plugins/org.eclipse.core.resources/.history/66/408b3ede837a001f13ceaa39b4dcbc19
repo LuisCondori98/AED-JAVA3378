@@ -16,8 +16,6 @@ public class Pregunta2 {
 		CantAsesorias = cantAsesorias;
 		this.tarifaAsesoria = tarifaAsesoria;
 		Asesor = asesor;
-		cAsesores++;
-		aAsesores += retornarSueldoBruto();
 	}
 	
 	//-	Un constructor que reciba a través de parámetros el código y la tarifa por asesoría y se los envíe al primer constructor
@@ -29,8 +27,6 @@ public class Pregunta2 {
 		this.tarifaAsesoria = tarifaAsesoria;
 		CantAsesorias = 8;
 		Asesor = "Julian";
-		cAsesores++;
-		aAsesores += retornarSueldoBruto();
 	}
 	
 	//-	Un constructor sin parámetros que envíe al segundo constructor los valores 1105 para el código, 30.0 para la
@@ -40,8 +36,6 @@ public class Pregunta2 {
 		Codigo = 1105;
 		this.tarifaAsesoria = 30;
 		Asesor = "Percy";
-		cAsesores++;
-		aAsesores += retornarSueldoBruto();
 	}
 	
 	//-	Un método que retorne el sueldo bruto (tarifa por consulta * número de asesorías).

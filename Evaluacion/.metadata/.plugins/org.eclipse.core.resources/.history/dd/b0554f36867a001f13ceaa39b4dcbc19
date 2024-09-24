@@ -88,7 +88,6 @@ public class Problema2 extends JFrame {
 		imprimir("Asesor \t\t: " + x.getAsesor());
 		imprimir("Sueldo Bruto \t\t: " + x.retornarSueldoBruto());
 		imprimir("Descuento \t\t: " + x.retornarDescuento());
-		imprimir("Sueldo Neto \t\t: " + x.retornarSueldoNeto());
 	}
 	
 	void imprimir(String s) {
