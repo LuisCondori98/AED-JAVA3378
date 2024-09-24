@@ -1,0 +1,54 @@
+package jframes;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+
+public class Problema2 extends JFrame {
+
+	private JPanel contentPane;
+	private JButton btnProblema2;
+	private JTextArea txtProblema2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Problema2 frame = new Problema2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Problema2() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 522, 558);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		btnProblema2 = new JButton("Procesar");
+		btnProblema2.setBounds(225, 11, 89, 23);
+		contentPane.add(btnProblema2);
+		
+		txtProblema2 = new JTextArea();
+		txtProblema2.setBounds(10, 45, 486, 463);
+		contentPane.add(txtProblema2);
+	}
+
+}
