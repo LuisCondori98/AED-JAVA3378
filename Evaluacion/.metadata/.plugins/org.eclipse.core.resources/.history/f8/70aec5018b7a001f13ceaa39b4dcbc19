@@ -63,32 +63,32 @@ public class Problema1 extends JFrame {
 	
 	protected void actionPerformedBtnProblema1(ActionEvent arg0) {
 		
-		Pregunta1 Empleado = new Pregunta1(123, 1, 20, "Luis", 10.9);
+		Pregunta1 pg1 = new Pregunta1(123, 1, 20, "Luis");
 		
-		imprimir("Codigo \t\t:  " + Empleado.getCodigo());
-		imprimir("Nombre \t\t:  " + Empleado.getNombre());
-		imprimir("Categoria \t\t:  " + Empleado.getCategoria());
-		imprimir("Horas \t\t:  " + Empleado.getHoras());
-		imprimir("Tarifa \t\t:  " + Empleado.getTarifa());
+		imprimir("Codigo \t\t:  " + pg1.getCodigo());
+		imprimir("Nombre \t\t:  " + pg1.getNombre());
+		imprimir("Categoria \t\t:  " + pg1.getCategoria());
+		imprimir("Horas \t\t:  " + pg1.getHoras());
+		imprimir("Tarifa \t\t:  " + pg1.getTarifa());
 		//
-		imprimir("Sueldo Bruto \t\t:  " + Empleado.retornarSueldoBruto());
-		imprimir("Descuento AFP \t:  " + Empleado.retornarDescuentoAFP());
-		imprimir("Descuento EPS \t:  " + Empleado.retornarDescuentoEPS());
-		imprimir("Sueldo Neto \t\t:  " + Empleado.retornarSueldoNeto());
+		imprimir("Sueldo Bruto \t\t:  " + pg1.retornarSueldoBruto());
+		imprimir("Descuento AFP \t:  " + pg1.retornarDescuentoAFP());
+		imprimir("Descuento EPS \t:  " + pg1.retornarDescuentoEPS());
+		imprimir("Sueldo Neto \t\t:  " + pg1.retornarSueldoNeto());
 		imprimir("\n");
 		
-		Empleado.setHoras(Empleado.getHoras() + 8);
+		pg1.setHoras(pg1.getHoras() + 8);
 		
-		imprimir("Codigo \t\t:  " + Empleado.getCodigo());
-		imprimir("Nombre \t\t:  " + Empleado.getNombre());
-		imprimir("Categoria \t\t:  " + Empleado.getCategoria());
-		imprimir("Horas \t\t:  " + Empleado.getHoras());
-		imprimir("Tarifa \t\t:  " + Empleado.getTarifa());
+		imprimir("Codigo \t\t:  " + pg1.getCodigo());
+		imprimir("Nombre \t\t:  " + pg1.getNombre());
+		imprimir("Categoria \t\t:  " + pg1.getCategoria());
+		imprimir("Horas \t\t:  " + pg1.getHoras());
+		imprimir("Tarifa \t\t:  " + pg1.getTarifa());
 		//
-		imprimir("Sueldo Bruto \t\t:  " + Empleado.retornarSueldoBruto());
-		imprimir("Descuento AFP \t:  " + Empleado.retornarDescuentoAFP());
-		imprimir("Descuento EPS \t:  " + Empleado.retornarDescuentoEPS());
-		imprimir("Sueldo Neto \t\t:  " + Empleado.retornarSueldoNeto());		
+		imprimir("Sueldo Bruto \t\t:  " + pg1.retornarSueldoBruto());
+		imprimir("Descuento AFP \t:  " + pg1.retornarDescuentoAFP());
+		imprimir("Descuento EPS \t:  " + pg1.retornarDescuentoEPS());
+		imprimir("Sueldo Neto \t\t:  " + pg1.retornarSueldoNeto());		
 	}
 	
 	void imprimir(String s) {

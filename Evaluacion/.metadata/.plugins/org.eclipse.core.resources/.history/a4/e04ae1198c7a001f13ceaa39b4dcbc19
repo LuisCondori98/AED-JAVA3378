@@ -4,14 +4,13 @@ public class Pregunta1 {
 
 	private int Codigo, Categoria, Horas;
 	private String Nombre;
-	private double Tarifa;
+	private double Tarifa = 0;
 	
-	public Pregunta1(int codigo, int categoria, int horas, String nombre, double tarifa) {
+	public Pregunta1(int codigo, int categoria, int horas, String nombre) {
 		this.Codigo = codigo;
 		this.Categoria = categoria;
 		this.Horas = horas;
 		this.Nombre = nombre;
-		this.Tarifa = tarifa;
 	}
 	
 	//-	Un método que retorne el sueldo bruto (horas * tarifa).

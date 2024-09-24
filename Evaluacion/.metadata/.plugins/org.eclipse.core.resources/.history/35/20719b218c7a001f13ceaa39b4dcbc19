@@ -63,7 +63,7 @@ public class Problema1 extends JFrame {
 	
 	protected void actionPerformedBtnProblema1(ActionEvent arg0) {
 		
-		Pregunta1 Empleado = new Pregunta1(123, 1, 20, "Luis", 10.9);
+		Pregunta1 Empleado = new Pregunta1(123, 1, 20, "Luis");
 		
 		imprimir("Codigo \t\t:  " + Empleado.getCodigo());
 		imprimir("Nombre \t\t:  " + Empleado.getNombre());

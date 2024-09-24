@@ -26,6 +26,8 @@ public class Pregunta2 {
 	public Pregunta2(int codigo, double tarifaAsesoria) {
 		
 		this(codigo, 8, tarifaAsesoria, "Julian");
+		cAsesores++;
+		aAsesores += retornarSueldoNeto();
 	}
 	
 	//-	Un constructor sin parámetros que envíe al segundo constructor los valores 1105 para el código, 30.0 para la
@@ -33,6 +35,8 @@ public class Pregunta2 {
 	public Pregunta2() {
 		
 		this(1105, 0, 30, "Percy");
+		cAsesores++;
+		aAsesores += retornarSueldoNeto();
 	}
 	
 	//-	Un método que retorne el sueldo bruto (tarifa por consulta * número de asesorías).

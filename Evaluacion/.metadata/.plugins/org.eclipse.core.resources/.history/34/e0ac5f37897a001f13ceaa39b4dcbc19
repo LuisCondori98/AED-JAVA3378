@@ -41,7 +41,7 @@ public class Problema2 extends JFrame {
 	 */
 	public Problema2() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 522, 796);
+		setBounds(100, 100, 522, 672);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -57,7 +57,7 @@ public class Problema2 extends JFrame {
 		contentPane.add(btnProblema2);
 		
 		txtProblema2 = new JTextArea();
-		txtProblema2.setBounds(10, 45, 486, 701);
+		txtProblema2.setBounds(10, 45, 486, 577);
 		contentPane.add(txtProblema2);
 	}
 
@@ -66,7 +66,7 @@ public class Problema2 extends JFrame {
 		Pregunta2 Asesor = new Pregunta2(123, 9, 200.9, "Juanjo");
 		Pregunta2 Asesor2 = new Pregunta2(456, 380.9);
 		Pregunta2 Asesor3 = new Pregunta2();
-		//Pregunta2 Asesor4 = new Pregunta2(963, 4, 590.9, "Fiorella");
+		Pregunta2 Asesor4 = new Pregunta2(963, 4, 590.9, "Fiorella");
 		
 		listado(Asesor);
 		imprimir("\n");
@@ -74,8 +74,6 @@ public class Problema2 extends JFrame {
 		imprimir("\n");
 		listado(Asesor3);
 		imprimir("");
-		//listado(Asesor4);
-		//imprimir("");
 		//-	Muestre el factor de descuento, la cantidad de objetos creados y la suma de los sueldos netos
 		imprimir("Factor de descuento \t:" + Asesor.FACTOR_DSCTO);
 		imprimir("Cantidad de objetos creados \t:" + Asesor.getcAsesores());
