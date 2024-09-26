@@ -78,7 +78,7 @@ public class Ejemplo extends JFrame implements ActionListener {
 		scrollPane.setViewportView(txtS);
 	}
 	
-	//  Declaración global
+	//  Declaraciï¿½n global
 	Arreglo a = new Arreglo();
 	
 	/** 
@@ -101,10 +101,10 @@ public class Ejemplo extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtnListar(ActionEvent arg0) {
 		/**
-		 * Visualiza los números del arreglo
+		 * Visualiza los nï¿½meros del arreglo
 		 */			
  		txtS.setText("");
- 	 	for (int i=0; i<a.tamaño(); i++)
+ 	 	for (int i=0; i<a.tamanio(); i++)
  			imprimir("n[" + i + "] :  " + a.obtener(i));		
 	}
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
@@ -112,24 +112,24 @@ public class Ejemplo extends JFrame implements ActionListener {
 		 * Muestra un reporte del arreglo
          */		
     	imprimir();    	
-    	imprimir("capacidad máxima del arreglo :  " + a.tamaño());    	
-    	imprimir("suma de todos los números :  " + a.sumaNumeros());
-    	imprimir("posición del primer número menor a 25 :  " + 
+    	imprimir("capacidad mï¿½xima del arreglo :  " + a.tamanio());    	
+    	imprimir("suma de todos los nï¿½meros :  " + a.sumaNumeros());
+    	imprimir("posiciï¿½n del primer nï¿½mero menor a 25 :  " + 
     	         a.posPrimerNumeroMenorA25());
 	}
 	protected void actionPerformedBtnGenerar(ActionEvent arg0) {
 		/**
-		 * Remplaza los números actuales por otros aleatorios de 3 cifras
+		 * Remplaza los nï¿½meros actuales por otros aleatorios de 3 cifras
          */		
 		a.generar();
 		imprimir();
-    	imprimir("Los números han sido cambiados. Pulse [Listar]");
+    	imprimir("Los nï¿½meros han sido cambiados. Pulse [Listar]");
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}

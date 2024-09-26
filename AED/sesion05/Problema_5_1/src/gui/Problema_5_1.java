@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Arreglos.ArregloEdades;
+
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -22,6 +25,7 @@ public class Problema_5_1 extends JFrame implements ActionListener {
 	private JButton btnGenerar;
 	private JScrollPane scrollPane;
 	private JTextArea txtS;
+	ArregloEdades arrEdad = new ArregloEdades();
 
 	/**
 	 * Launch the application.
@@ -87,16 +91,37 @@ public class Problema_5_1 extends JFrame implements ActionListener {
 		}
 	}
 	protected void actionPerformedBtnListar(ActionEvent arg0) {
+		
+		txtS.setText("");
+		for(int i=0; i < arrEdad.tamanio(); i++) {
+			
+			imprimir("Edad [" + i + "] => " + arrEdad.obtener(i));
+		}
 	}
+	
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
+		
+		imprimir("Promedio :" + arrEdad.retornarEdadPromedio());
+		imprimir("Edad Mayor :" + arrEdad.edadMayor());
+		imprimir("Edad Menor :" + arrEdad.edadMenor());
+		imprimir("Cant Mayores edad :" + arrEdad.cantMayoresEdad());
+		imprimir("Cant Menores edad :" + arrEdad.cantMenoresEdad());
+		imprimir("Posicion primera edad entre 12 y 20 :" + arrEdad.posPrimeraEdad());
+		imprimir("Posicion ultima edad entre 12 y 20 :" + arrEdad.posUltimaEdad());
 	}
+	
 	protected void actionPerformedBtnGenerar(ActionEvent arg0) {
+		
+		arrEdad.generarEdades();
+		imprimir();
+		imprimir("Las edades han sido cambiados");
 	}
-	//  Métodos tipo void (sin parámetros)
+	
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
