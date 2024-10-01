@@ -19,6 +19,18 @@ public class ArregloEdades {
 		return edad[i];
 	}
 	
+	public double sumatoriaEdades() {
+		
+		double suma = 0;
+		
+		for(int i = 0; i < tamanio(); i++) {
+			
+			suma += edad[i];
+		}
+		
+		return suma;
+	}
+	
 	public double retornarEdadPromedio() {
 		
 		double promedio = 0;
@@ -27,8 +39,6 @@ public class ArregloEdades {
 			
 			promedio += obtener(i);
 		}
-		
-		System.out.println(promedio);
 		
 		return promedio / tamanio();
 	}
@@ -65,7 +75,7 @@ public class ArregloEdades {
 	
 	public int cantMayoresEdad() {
 		
-		int cedad=0;
+		int cEdad=0;
 		
 		for(int i = 0; i < tamanio(); i++) {
 			
@@ -80,7 +90,7 @@ public class ArregloEdades {
 	
 	public int cantMenoresEdad() {
 		
-		int cedad=0;
+		int cEdad=0;
 		
 		for(int i = 0; i < tamanio(); i++) {
 			
