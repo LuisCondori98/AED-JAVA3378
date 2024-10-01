@@ -81,11 +81,11 @@ public class ArregloEdades {
 			
 			if(obtener(i) >= 18) {
 				
-				cEdad++;
+				cedad++;
 			}
 		}
 		
-		return cEdad;
+		return cedad;
 	}
 	
 	public int cantMenoresEdad() {
@@ -96,11 +96,11 @@ public class ArregloEdades {
 			
 			if(obtener(i) < 18) {
 				
-				cEdad++;
+				cedad++;
 			}
 		}
 		
-		return cEdad;
+		return cedad;
 	}
 	
 	public int posPrimeraEdad() {
