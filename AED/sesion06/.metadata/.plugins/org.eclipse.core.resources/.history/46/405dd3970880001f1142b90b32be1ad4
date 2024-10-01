@@ -1,0 +1,14 @@
+package sesion_06;
+
+public class ArregloEdades {
+
+	private int Edad[];
+	private int indice;
+	
+	public ArregloEdades() {
+		
+		Edad = new int[10];
+	}
+	
+	
+}

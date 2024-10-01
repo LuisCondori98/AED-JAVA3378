@@ -123,37 +123,52 @@ public class Problema_6_1 extends JFrame implements ActionListener {
 
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
 		
+		
 	}
+	
 	protected void actionPerformedBtnEliminarAlFinal(ActionEvent arg0) {
 		
+		
 	}
+	
 	protected void actionPerformedBtnEliminarTodo(ActionEvent arg0) {
 		
+		
 	}
+	
 	protected void actionPerformedBtnIncrementarPrimeraEdadAdulta(ActionEvent arg0) {
 		
-	}
-	protected void actionPerformedBtnRemplazarPrimeraEdadAdulta(ActionEvent arg0) {
 		
 	}
+	
+	protected void actionPerformedBtnRemplazarPrimeraEdadAdulta(ActionEvent arg0) {
+		
+		
+	}
+	
 	//  Métodos tipo void (sin parámetros)
 	void imprimir() {
 		imprimir("");
 	}
+	
 	void limpieza() {
 		txtEdad.setText("");
 		txtEdad.requestFocus();
 	}
+	
 	void listar() {
 
 	}
+	
 	//  Métodos tipo void (con parámetros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
+	
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
+	
 	//  Métodos que retornan valor (sin parámetros)
 	int leerEdad()  {
 		return Integer.parseInt(txtEdad.getText().trim());

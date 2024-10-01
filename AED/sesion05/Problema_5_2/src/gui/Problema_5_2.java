@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import semana_05.ArregloSueldos;
+
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -22,6 +25,7 @@ public class Problema_5_2 extends JFrame implements ActionListener {
 	private JButton btnGenerar;
 	private JScrollPane scrollPane;
 	private JTextArea txtS;
+	ArregloSueldos arrSueldos = new ArregloSueldos();
 
 	/**
 	 * Launch the application.
@@ -87,6 +91,8 @@ public class Problema_5_2 extends JFrame implements ActionListener {
 		}
 	}
 	protected void actionPerformedBtnListar(ActionEvent arg0) {
+		
+		imprimir("Sueldo promedio :" + arrSueldos.sueldoPromedio());
 	}
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
 	}
