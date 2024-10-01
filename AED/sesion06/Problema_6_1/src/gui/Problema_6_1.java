@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.EventQueue;
+import sesion_06.ArregloEdades;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -120,30 +121,47 @@ public class Problema_6_1 extends JFrame implements ActionListener {
 		}
 		limpieza();
 	}
+	
+	ArregloEdades ae = new ArregloEdades();
 
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
 		
-		
+		try {
+			ae.adicionar(leerEdad());
+			listar();
+		}
+		catch (Exception e) {
+			mensaje("error de ingreso");
+		}
 	}
 	
 	protected void actionPerformedBtnEliminarAlFinal(ActionEvent arg0) {
 		
-		
+		try {
+			ae.eliminarAlFinal();
+			listar();
+		}
+		catch (Exception e) {
+			mensaje("error de ingreso");
+		}
 	}
 	
 	protected void actionPerformedBtnEliminarTodo(ActionEvent arg0) {
 		
-		
+		ae.eliminarTodo();
+		listar();
 	}
 	
 	protected void actionPerformedBtnIncrementarPrimeraEdadAdulta(ActionEvent arg0) {
 		
-		
+		ae.incrementarPrimeraEdadAdulta();
+		listar();
 	}
 	
 	protected void actionPerformedBtnRemplazarPrimeraEdadAdulta(ActionEvent arg0) {
 		
-		
+		ae.remplazarPrimeraEdadAdulta();
+		listar();
 	}
 	
 	//  Métodos tipo void (sin parámetros)
@@ -158,6 +176,11 @@ public class Problema_6_1 extends JFrame implements ActionListener {
 	
 	void listar() {
 
+		txtS.setText("");
+		for(int i = 0; i < ae.tamanio(); i++) {
+			
+			imprimir("edad [" + i + "] = " + ae.obtener(i));
+		}
 	}
 	
 	//  Métodos tipo void (con parámetros)

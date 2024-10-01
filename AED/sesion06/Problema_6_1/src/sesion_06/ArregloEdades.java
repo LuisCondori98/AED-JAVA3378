@@ -43,12 +43,12 @@ public class ArregloEdades {
 		}
 	}
 	
-	public void elimiarAlFinal() {
+	public void eliminarAlFinal() {
 		
 		indice--;	
 	}
 	
-	public void elimiarTodo() {
+	public void eliminarTodo() {
 		
 		indice = 0;
 	}
