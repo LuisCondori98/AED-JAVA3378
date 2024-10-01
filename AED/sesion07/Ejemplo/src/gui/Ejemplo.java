@@ -142,12 +142,16 @@ public class Ejemplo extends JFrame implements ActionListener {
 	 */
 	protected void actionPerformedBtnPrimeroAlFinal(ActionEvent arg0) {
 
+		a.primeroAlFinal();
+		listar();
 	}
 	/**
 	 *  Traslada el �ltimo n�mero al inicio
 	 */
 	protected void actionPerformedBtnUltimoAlInicio(ActionEvent arg0) {
 
+		a.ultimoAlInicio();
+		listar();
 	}
 	/**
 	 *  Lee un n�mero, lo busca, y si est� registrado lo elimina
