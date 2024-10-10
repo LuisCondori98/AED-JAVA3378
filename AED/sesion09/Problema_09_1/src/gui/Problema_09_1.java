@@ -64,7 +64,7 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 	public Problema_09_1() {
 		setTitle("Problema_09_1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 630, 400);
+		setBounds(100, 100, 630, 477);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -125,7 +125,7 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 		scrollPaneA.setViewportView(tblTabla);
 
 		modelo = new DefaultTableModel();
-		modelo.addColumn("código");
+		modelo.addColumn("codigo");
 		modelo.addColumn("nombre");
 		modelo.addColumn("nota 1");
 		modelo.addColumn("nota 2");
@@ -133,17 +133,17 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 		tblTabla.setModel(modelo);
 
 		scrollPaneB = new JScrollPane();
-		scrollPaneB.setBounds(10, 250, 432, 100);
+		scrollPaneB.setBounds(10, 250, 432, 180);
 		contentPane.add(scrollPaneB);
 		
 		txtS = new JTextArea();
-		txtS.setFont(new Font("Monospaced", Font.PLAIN, 13));
+		txtS.setFont(new Font("Arial", Font.BOLD, 13));
 		scrollPaneB.setViewportView(txtS);
 		
 		listar();		
 	}
 	
-	//  Declaración global
+	//  Declaraciï¿½n global
 	ArregloAlumnos aa = new ArregloAlumnos();
 	
 	public void actionPerformed(ActionEvent arg0) {
@@ -172,13 +172,19 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 		 * Visualiza un reporte
 		 */
 		txtS.setText("");
-		imprimir("cantidad de alumnos :  " + aa.tamaño());
+		imprimir("cantidad de alumnos :  " + aa.tamanio());
 		imprimir("cantidad de aprobados :  " + aa.cantAprobados());
+		imprimir("cantidad de desaprobados :  " + aa.cantDesaprobados());
+		imprimir("primer alumno de desaprobado :  " + aa.primerNombreDesaprobado());
+		imprimir("ultimo alumno de aprobado :  " + aa.ultimoNombreAprobado());
+		imprimir("segundo alumno de desaprobado :  " + aa.segundoNombreDesaprobado());
+		imprimir("penultimo alumno de aprobado :  " + aa.penultimoNombreAprobado());
   	}
-	//  Métodos tipo void (sin parámetros)
+	
 	void imprimir() {
 		imprimir("");
 	}
+	
 	void limpieza() {
 		txtCodigo.setText("");
 		txtNombre.setText("");
@@ -186,9 +192,10 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 		txtNota2.setText("");
 		txtCodigo.requestFocus();
 	}
+	
    	void listar() {
 		modelo.setRowCount(0);
-		for (int i=0; i<aa.tamaño(); i++) {
+		for (int i=0; i<aa.tamanio(); i++) {
 			Object[] fila = { aa.obtener(i).getCodigo(),
 					          aa.obtener(i).getNombre(),
 					          aa.obtener(i).getNota1(),
@@ -197,25 +204,28 @@ public class Problema_09_1 extends JFrame implements ActionListener {
 			modelo.addRow(fila);
 		}
 	}
-	//  Métodos tipo void (con parámetros)
+   	
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
+	
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}		
-	//  Métodos que retornan valor (sin parámetros)
+	
 	int leerCodigo() {
 		return Integer.parseInt(txtCodigo.getText().trim());
 	}
+	
 	String leerNombre() {
 		return txtNombre.getText().trim();
 	}
+	
 	int leerNota1() {
 		return Integer.parseInt(txtNota1.getText().trim());
 	}
+	
 	int leerNota2() {
 		return Integer.parseInt(txtNota2.getText().trim());
 	}
-	
 }

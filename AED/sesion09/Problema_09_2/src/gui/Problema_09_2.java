@@ -1,5 +1,6 @@
 package gui;
 
+import arreglo.ArregloDocentes;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -61,7 +62,7 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 	public Problema_09_2() {
 		setTitle("Problema_09_2");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 630, 400);
+		setBounds(100, 100, 630, 493);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -122,7 +123,7 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 		scrollPaneA.setViewportView(tblTabla);
 
 		modelo = new DefaultTableModel();
-		modelo.addColumn("código");
+		modelo.addColumn("codigo");
 		modelo.addColumn("nombre");
 		modelo.addColumn("horas");
 		modelo.addColumn("tarifa");
@@ -130,11 +131,11 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 		tblTabla.setModel(modelo);
 
 		scrollPaneB = new JScrollPane();
-		scrollPaneB.setBounds(10, 250, 432, 100);
+		scrollPaneB.setBounds(10, 250, 432, 196);
 		contentPane.add(scrollPaneB);
 		
 		txtS = new JTextArea();
-		txtS.setFont(new Font("Monospaced", Font.PLAIN, 13));
+		txtS.setFont(new Font("Arial", Font.PLAIN, 14));
 		scrollPaneB.setViewportView(txtS);
 		
 		listar();		
@@ -148,21 +149,24 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 		}
 	}
 	
-	//  Declaración global
+	//  Declaraciï¿½n global
+	ArregloDocentes ad = new ArregloDocentes();
 	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
-		/**
-		 * Agrega un nuevo docente
-		 */	
-
+		
+		
 	}
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
-		/**
-		 * Visualiza un reporte
-		 */
-
+		
+		txtS.setText("");
+		imprimir("Sueldo promedio \t:" + ad.sueldoPromedio());
+		imprimir("Sueldo Mayor \t:" + ad.sueldoMayor());
+		imprimir("Sueldo Menor \t:" + ad.sueldoMenor());
+		imprimir("Tarifa Mayor \t\t:" + ad.tarifaMayor());
+		imprimir("Tarifa Menor \t\t:" + ad.tarifaMenor());
+		
   	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -175,16 +179,24 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 	}
    	void listar() {
 		modelo.setRowCount(0);
-
+		for (int i=0; i<ad.tamanio(); i++) {
+			Object[] fila = { ad.obtener(i).getCodigo(),
+					          ad.obtener(i).getNombre(),
+					          ad.obtener(i).getHoras(),
+					          ad.obtener(i).getTarifa(),
+					          ad.obtener(i).calcularSueldoBruto(),
+					        };
+			modelo.addRow(fila);
+		}		
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}		
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerCodigo() {
 		return Integer.parseInt(txtCodigo.getText().trim());
 	}
