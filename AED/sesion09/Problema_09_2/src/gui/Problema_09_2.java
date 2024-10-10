@@ -1,6 +1,8 @@
 package gui;
 
 import arreglo.ArregloDocentes;
+import clase.Docente;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -149,12 +151,19 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 		}
 	}
 	
-	//  Declaraci�n global
+	//  Declaracion global
 	ArregloDocentes ad = new ArregloDocentes();
 	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
 		
-		
+		int codigo = leerCodigo();
+		String nombre = leerNombre();
+		int horas = leerHoras();
+		double tarifa = leerTarifa();
+		Docente nuevo = new Docente(nombre, codigo, horas, tarifa);
+		ad.adicionar(nuevo);
+		listar();
+		limpieza();
 	}
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
 		
@@ -168,9 +177,11 @@ public class Problema_09_2 extends JFrame implements ActionListener {
   	}
 	//  M�todos tipo void (sin par�metros)
 	void imprimir() {
+		
 		imprimir("");
 	}
 	void limpieza() {
+		
 		txtCodigo.setText("");
 		txtNombre.setText("");
 		txtHoras.setText("");
@@ -189,25 +200,36 @@ public class Problema_09_2 extends JFrame implements ActionListener {
 			modelo.addRow(fila);
 		}		
 	}
+   	
 	//  M�todos tipo void (con par�metros)
 	void imprimir(String s) {
+		
 		txtS.append(s + "\n");
 	}
+	
 	void mensaje(String s) {
+		
 		JOptionPane.showMessageDialog(this, s);
 	}		
+	
 	//  M�todos que retornan valor (sin par�metros)
 	int leerCodigo() {
+		
 		return Integer.parseInt(txtCodigo.getText().trim());
 	}
+	
 	String leerNombre() {
+		
 		return txtNombre.getText().trim();
 	}
+	
 	int leerHoras() {
+		
 		return Integer.parseInt(txtHoras.getText().trim());
 	}
+	
 	double leerTarifa() {
+		
 		return Double.parseDouble(txtTarifa.getText().trim());
 	}
-	
 }
