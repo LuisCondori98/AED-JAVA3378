@@ -1,0 +1,22 @@
+INDEX VERSION 1.127+C:\Users\elhiu\Downloads\IMPLEMENTACIÓN\2024-1\EA4683\AED_Semana_12_Lab\.metadata\.plugins\org.eclipse.jdt.core
+1967204194.index
+3117623274.index
+3976197470.index
+1540274653.index
+1621738522.index
+3601512671.index
+3325898600.index
+2122092456.index
+416476162.index
+2857741647.index
+3990965152.index
+712677922.index
+2519780867.index
+286698606.index
+551188048.index
+2417999848.index
+255434681.index
+801407690.index
+908302613.index
+938054819.index
+2826387459.index

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="padre.Vehiculo"/>
+<fullyQualifiedTypeName name="hijos.Auto"/>
+<fullyQualifiedTypeName name="hijos.Camioneta"/>
+<fullyQualifiedTypeName name="hijos.Entrenador"/>
+<fullyQualifiedTypeName name="hijos.Masajista"/>
+<fullyQualifiedTypeName name="padre.SeleccionFutbol"/>
+<fullyQualifiedTypeName name="hijos.Futbolistas"/>
+</qualifiedTypeNameHistroy>

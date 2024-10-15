@@ -6,8 +6,10 @@ public class Persona {
 	private int codigo, estado;
 	private String nombre, dni;
 	private double peso, estatura;
+	
 	//  Constructor
 	public Persona(int codigo, String nombre, String dni, double peso, double estatura, int estado) {
+		
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.dni = dni;
@@ -15,49 +17,78 @@ public class Persona {
 		this.estatura = estatura;
 		this.estado = estado;
 	}
+	
 	//  Métodos de acceso público: set/get
 	public void setCodigo(int codigo) {
+		
 		this.codigo = codigo;
 	}
+	
 	public void setNombre(String nombre) {
+		
 		this.nombre = nombre;
 	}
+	
 	public void setDni(String dni) {
+		
 		this.dni = dni;
 	}
+	
 	public void setPeso(double peso) {
+		
 		this.peso = peso;
 	}
+	
 	public void setEstatura(double estatura) {
+		
 		this.estatura = estatura;
 	}
+	
 	public void setEstado(int estado) {
+		
 		this.estado = estado;
 	}
+	
 	public int getCodigo() {
+		
 		return codigo;
 	}
+	
 	public String getNombre() {
+		
 		return nombre;
 	}
+	
 	public String getDni() {
+		
 		return dni;
 	}
+	
 	public double getPeso() {
+		
 		return peso;
 	}
+	
 	public double getEstatura() {
+		
 		return estatura;
 	}
+	
 	public int getEstado() {
+		
 		return estado;
 	}
+	
 	//  Operaciones públicas complementarias
 	public double imc() {
+		
 		return peso / (estatura * estatura);
 	}
+	
 	public String grado() {
+		
 		double masa = imc();
+		
 		if (masa < 16.0)
 			return "Infrapeso";
 		else
