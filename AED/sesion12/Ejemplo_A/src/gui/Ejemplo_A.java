@@ -66,12 +66,17 @@ public class Ejemplo_A extends JFrame implements ActionListener {
 		txtS.setFont(new Font("Monospaced", Font.PLAIN, 14));
 		scrollPane.setViewportView(txtS);
 	}
+	
 	public void actionPerformed(ActionEvent arg0) {
+		
 		if (arg0.getSource() == btnProcesar) {
+			
 			actionPerformedBtnProcesar(arg0);
 		}
 	}
+	
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
+		
 	   	Persona p = new Persona("Juan", "Matos", 18);
     	listado(p);
     	
@@ -81,28 +86,37 @@ public class Ejemplo_A extends JFrame implements ActionListener {
 		Docente d = new Docente("Pedro", "Rojas", 31, 100, 45.9);
 		listado(d);
 	}
+	
 	//  Métodos tipo void (sin parámetros)
 	void imprimir() {
+		
 		imprimir("");
 	}
+	
 	//  Métodos tipo void (con parámetros)
 	void imprimir(String s) {
+		
 		txtS.append(s + "\n");
 	}
+	
 	void listado(Persona x) {
+		
 		imprimir(">>>  P E R S O N A");
 		imprimir(x.datosDeLaPersona());
 		imprimir();
 	}
+	
 	void listado(Alumno x) {
+		
 		imprimir(">>>  A L U M N O");
 		imprimir(x.datosDelAlumno());
 		imprimir();
 	}
+	
 	void listado(Docente x) {
+		
 		imprimir(">>>  D O C E N T E");
 		imprimir(x.datosDelDocente());
 		imprimir();
 	}
-	
 }

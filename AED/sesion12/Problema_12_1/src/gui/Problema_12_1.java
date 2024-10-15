@@ -9,6 +9,11 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
+
+import hijos.Auto;
+import hijos.Camioneta;
+import padre.Vehiculo;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -69,12 +74,39 @@ public class Problema_12_1 extends JFrame implements ActionListener {
 			actionPerformedBtnProcesar(arg0);
 		}
 	}
+	
+	Vehiculo ve = new Vehiculo("Hyundai", "Tucson", "F7W165");
+	Auto au = new Auto("Toyota", "Yaris", "8T9G6W", 82.265);
+	Camioneta ca = new Camioneta("Ford", "Raptor", "R6W2V4", 120.580);
+	
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
+		listado(ve);
+		listado(au);
+		listado(ca);
+	}	
+	//==================================================================================================
+	
+	void listado(Vehiculo x) {
+		
+		imprimir("\t>>>>> V E H I C U L O <<<<<");
+		imprimir(x.datosDelVehiculo());
+		imprimir();
+	}
+	
+	void listado(Auto x) {
+		
+		imprimir("\t>>>>> A U T O <<<<<");
+		imprimir(x.datosDelAuto());
+		imprimir();
 	}
 
+	void listado(Camioneta x) {
 	
-	//==================================================================================================
+	imprimir("\t>>>>> C A M I O N E T A <<<<<");
+	imprimir(x.datosDeLaCamioneta());
+	imprimir();
+}
 	
 	//  Métodos tipo void (sin parámetros)
 	void imprimir() {

@@ -8,6 +8,7 @@ public class Persona {
 	
 	// Constructor
 	public Persona(String nombre, String apellido, int edad) {
+		
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.edad = edad;
@@ -15,6 +16,7 @@ public class Persona {
 	
 	// Operaciones públicas
 	public String datosDeLaPersona() {
+		
 		return "Nombre   :  " + nombre + "\n" +
 		       "Apellido :  " + apellido + "\n" +
 		       "Edad     :  " + edad + "\n" +
@@ -23,7 +25,8 @@ public class Persona {
 	
 	// Operaciones privadas	
 	private String generarCorreo() {
-		return nombre + "." + apellido + "@cibertec.edu.pe";
+		
+		return nombre.charAt(0) + "." + apellido + "@cibertec.edu.pe";
 	}
 	
 }
