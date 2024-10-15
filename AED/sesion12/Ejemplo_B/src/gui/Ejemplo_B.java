@@ -89,6 +89,7 @@ public class Ejemplo_B extends JFrame implements ActionListener {
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
+	
 	void listado(Persona x) {
 		if (x instanceof Alumno)
 			imprimir(">>>  A L U M N O");

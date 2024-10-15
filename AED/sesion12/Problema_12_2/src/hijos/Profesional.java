@@ -14,7 +14,7 @@ public class Profesional extends Licencia {
 	
 	public String datosLicenciaProfesional() {
 		
-		return datosDelBrevete() + "\nRuc \t\t\t: " + ruc + "\nCodigo \t\t\t: " + segundoCodigo();
+		return datosDelBrevete() + "\nRuc \t\t\t: " + ruc + "\nCodigo 2 \t\t: " + segundoCodigo();
 	}
 	
 	private String segundoCodigo() {

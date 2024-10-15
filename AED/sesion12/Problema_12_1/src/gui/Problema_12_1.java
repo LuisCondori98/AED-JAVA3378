@@ -89,8 +89,20 @@ public class Problema_12_1 extends JFrame implements ActionListener {
 	
 	void listado(Vehiculo x) {
 		
+		if(x instanceof Auto)
+			imprimir("\t>>>>> A U T O <<<<<");
+		else if(x instanceof Camioneta)
+			imprimir("\t>>>>> C A M I O N E T A <<<<<");
+		else
+			imprimir("\t>>>>> V E H I C U L O <<<<<");
+		imprimir(x.datosCompletos());
+		imprimir();
+	}
+	
+	/*void listado(Vehiculo x) {
+		
 		imprimir("\t>>>>> V E H I C U L O <<<<<");
-		imprimir(x.datosDelVehiculo());
+		imprimir(x.datosCompletos());
 		imprimir();
 	}
 	
@@ -106,16 +118,13 @@ public class Problema_12_1 extends JFrame implements ActionListener {
 	imprimir("\t>>>>> C A M I O N E T A <<<<<");
 	imprimir(x.datosDeLaCamioneta());
 	imprimir();
-}
+	}*/
 	
-	//  Métodos tipo void (sin parámetros)
 	void imprimir() {
 		imprimir("");
 	}
 	
-	//  Métodos tipo void (con parámetros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
-	
 }

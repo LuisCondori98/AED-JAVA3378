@@ -12,9 +12,9 @@ public class Auto extends Vehiculo {
 		this.precio = precio;
 	}
 	
-	public String datosDelAuto() {
+	public String datosCompletos() {
 		
-		return datosDelVehiculo() + "\nPrecio \t\t: " + precio + "\nDescuento \t: " + descuento() + "\nImporte total \t: " + aPagar();
+		return super.datosCompletos() + "\nPrecio \t\t: " + precio + "\nDescuento \t: " + descuento() + "\nImporte total \t: " + aPagar();
 	}
 	
 	private double descuento() {

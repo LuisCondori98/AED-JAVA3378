@@ -11,7 +11,7 @@ public class Vehiculo {
 		this.placa = placa;
 	}
 	
-	public String datosDelVehiculo() {
+	public String datosCompletos() {
 		
 		return "Marca \t\t: " + marca + "\nModelo \t\t: " + modelo + "\nPlaca \t\t: " + placa + "\nCodigo \t\t: " + codigoGenerado();
 	}

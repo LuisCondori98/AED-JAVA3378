@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="interfaz.Movimiento"/>
+<fullyQualifiedTypeName name="interfaz.Vuelo"/>
+<fullyQualifiedTypeName name="padre.Transporte"/>
+<fullyQualifiedTypeName name="hijo.Auto"/>
+<fullyQualifiedTypeName name="hijo.Bicicleta"/>
+<fullyQualifiedTypeName name="hijo.Moto"/>
+<fullyQualifiedTypeName name="hijo.Helicoptero"/>
+<fullyQualifiedTypeName name="hijo.Avion"/>
+<fullyQualifiedTypeName name="padre.Trabajador"/>
+<fullyQualifiedTypeName name="hijo.Empleado"/>
+<fullyQualifiedTypeName name="hijo.Consultor"/>
+</qualifiedTypeNameHistroy>

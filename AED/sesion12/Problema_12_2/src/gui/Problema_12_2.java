@@ -85,7 +85,7 @@ public class Problema_12_2 extends JFrame implements ActionListener {
 		Particular pa = new Particular("A", "II", "03-06-2022", "03-06-2027", 70121474);
 		listado(pa);
 		
-		Profesional pr = new Profesional("B", "I", "02-11-2023", "02-11-2025", "10468729354");
+		Profesional pr = new Profesional("B", "II", "02-11-2023", "02-11-2025", "10468729354");
 		listado(pr);
 	}
 	

@@ -14,7 +14,7 @@ public class Particular extends Licencia{
 	
 	public String datosLicenciaParticular() {
 		
-		return datosDelBrevete() + "\nDni \t\t\t: " + dni + "\nCodigo \t\t\t: " + segundoCodigo();
+		return datosDelBrevete() + "\nDni \t\t\t: " + dni + "\nCodigo 2 \t\t: " + segundoCodigo();
 	}
 	
 	private String segundoCodigo() {
