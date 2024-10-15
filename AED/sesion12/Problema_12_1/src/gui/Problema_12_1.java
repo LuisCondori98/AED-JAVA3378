@@ -75,9 +75,9 @@ public class Problema_12_1 extends JFrame implements ActionListener {
 		}
 	}
 	
-	Vehiculo ve = new Vehiculo("Hyundai", "Tucson", "F7W165");
-	Auto au = new Auto("Toyota", "Yaris", "8T9G6W", 82.265);
-	Camioneta ca = new Camioneta("Ford", "Raptor", "R6W2V4", 120.580);
+	Vehiculo ve = new Vehiculo("Hyundai", "Tucson", "F7W-165");
+	Auto au = new Auto("Toyota", "Yaris", "8T9-G6W", 82.265);
+	Camioneta ca = new Camioneta("Ford", "Raptor", "R6W-2V4", 120.580);
 	
 	protected void actionPerformedBtnProcesar(ActionEvent arg0) {
 		
